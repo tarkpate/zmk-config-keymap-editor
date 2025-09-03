@@ -16,10 +16,24 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            hold-trigger-key-positions = <0 1 2 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38 3>;
-            flavor = "hold-preferred";
+            hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 39 40 41>;
+            flavor = "balanced";
             tapping-term-ms = <1000>;
             hold-while-undecided;
+            hold-trigger-on-release;
+        };
+
+        right_hold: right_hold {
+            compatible = "zmk,behavior-hold-tap";
+            label = "RIGHT_HOLD";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <1000>;
+            hold-while-undecided;
+            hold-trigger-on-release;
+            hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38>;
         };
     };
 
@@ -35,10 +49,10 @@
 
             label = "Base";
             bindings = <
-&trans  &kp DEL                &kp C                  &kp Y               &kp F               &kp K           &kp Z        &kp L        &kp COMMA    &kp U            &kp Q            &trans
-&trans  &left_hold LEFT_GUI R  &left_hold LEFT_ALT S  &left_hold LCTRL T  &left_hold LSHFT H  &kp P           &kp W        &mt RSHFT N  &mt RCTRL A  &mt RIGHT_ALT I  &mt RIGHT_GUI O  &trans
-&trans  &kp J                  &kp V                  &kp G               &kp D               &lt 3 B         &lt 8 X      &kp M        &kp PERIOD   &kp BACKSPACE    &trans           &trans
-                                                      &lt 5 TAB           &lt 2 E             &lt 1 ESCAPE    &lt 7 ENTER  &lt 6 SPACE  &trans
+&trans  &kp DEL                &kp C                  &kp Y               &kp F               &kp K           &kp Z        &kp L                &kp COMMA            &kp U                    &kp Q                    &trans
+&trans  &left_hold LEFT_GUI R  &left_hold LEFT_ALT S  &left_hold LCTRL T  &left_hold LSHFT H  &kp P           &kp W        &right_hold RSHFT N  &right_hold RCTRL A  &right_hold RIGHT_ALT I  &right_hold RIGHT_GUI O  &trans
+&trans  &kp J                  &kp V                  &kp G               &kp D               &lt 3 B         &lt 8 X      &kp M                &kp PERIOD           &kp BACKSPACE            &trans                   &trans
+                                                      &lt 5 TAB           &lt 2 E             &lt 1 ESCAPE    &lt 7 ENTER  &lt 6 SPACE          &trans
             >;
         };
 
