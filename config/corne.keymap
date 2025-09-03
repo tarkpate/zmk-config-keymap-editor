@@ -9,6 +9,20 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
+    behaviors {
+        left_hold: left_hold {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LEFT_HOLD";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            hold-trigger-key-positions = <0 1 2 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38 3>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <1000>;
+            hold-while-undecided;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -21,10 +35,10 @@
 
             label = "Base";
             bindings = <
-&trans  &kp DEL         &kp C           &kp Y        &kp F        &kp K           &kp Z        &kp L        &kp COMMA    &kp U            &kp Q            &trans
-&trans  &mt LEFT_GUI R  &mt LEFT_ALT S  &mt LCTRL T  &mt LSHFT H  &kp P           &kp W        &mt RSHFT N  &mt RCTRL A  &mt RIGHT_ALT I  &mt RIGHT_GUI O  &trans
-&trans  &kp J           &kp V           &kp G        &kp D        &lt 3 B         &lt 8 X      &kp M        &kp PERIOD   &kp BACKSPACE    &trans           &trans
-                                        &lt 5 TAB    &lt 2 E      &lt 1 ESCAPE    &lt 7 ENTER  &lt 6 SPACE  &trans
+&trans  &kp DEL                &kp C                  &kp Y               &kp F               &kp K           &kp Z        &kp L        &kp COMMA    &kp U            &kp Q            &trans
+&trans  &left_hold LEFT_GUI R  &left_hold LEFT_ALT S  &left_hold LCTRL T  &left_hold LSHFT H  &kp P           &kp W        &mt RSHFT N  &mt RCTRL A  &mt RIGHT_ALT I  &mt RIGHT_GUI O  &trans
+&trans  &kp J                  &kp V                  &kp G               &kp D               &lt 3 B         &lt 8 X      &kp M        &kp PERIOD   &kp BACKSPACE    &trans           &trans
+                                                      &lt 5 TAB           &lt 2 E             &lt 1 ESCAPE    &lt 7 ENTER  &lt 6 SPACE  &trans
             >;
         };
 
