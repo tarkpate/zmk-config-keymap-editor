@@ -113,10 +113,10 @@
 
         Punctuation {
             bindings = <
-&none  &kp GRAVE      &none         &kp TILDE     &kp AT    &none            &none  &kp HOME   &kp PG_DN  &kp PG_UP  &kp END    &none
-&none  &kp LS(QMARK)  &kp LS(EXCL)  &kp LS(DQT)   &kp SQT   &none            &none  &kp LSHFT  &kp LCTRL  &kp LALT   &kp RGUI   &none
-&none  &none          &kp LS(AMPS)  &kp BSLH      &none     &none            &none  &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &none
-                                    &kp LS(PIPE)  &kp SEMI  &kp LS(COLON)    &none  &none      &none
+&none  &kp GRAVE      &none         &kp TILDE      &kp AT         &none            &none  &kp HOME   &kp PG_DN  &kp PG_UP  &kp END    &none
+&none  &kp LS(QMARK)  &kp LS(EXCL)  &kp LS(DQT)    &kp SQT        &none            &none  &kp LSHFT  &kp LCTRL  &kp LALT   &kp RGUI   &none
+&none  &none          &none         &kp AMPERSAND  &kp BACKSLASH  &none            &none  &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &none
+                                    &kp LS(PIPE)   &kp SEMI       &kp LS(COLON)    &none  &none      &none
             >;
         };
 
