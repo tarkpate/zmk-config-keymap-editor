@@ -53,7 +53,7 @@
             bindings = <
 &trans  &kp DEL                &kp C                  &kp Y               &kp F               &kp K           &kp Z        &kp L                &kp COMMA            &kp U                    &kp Q                    &trans
 &trans  &left_hold LEFT_GUI R  &left_hold LEFT_ALT S  &left_hold LCTRL T  &left_hold LSHFT H  &kp P           &kp W        &right_hold RSHFT N  &right_hold RCTRL A  &right_hold RIGHT_ALT I  &right_hold RIGHT_GUI O  &trans
-&trans  &kp J                  &kp V                  &kp G               &kp D               &lt 3 B         &lt 8 X      &kp M                &kp PERIOD           &kp BACKSPACE            &trans                   &trans
+&trans  &kp J                  &kp V                  &kp G               &kp D               &lt 3 B         &lt 8 X      &kp M                &kp PERIOD           &kp BACKSPACE            &kp SCROLLLOCK           &trans
                                                       &lt 5 TAB           &lt 2 E             &lt 1 ESCAPE    &lt 7 ENTER  &lt 6 SPACE          &trans
             >;
         };
